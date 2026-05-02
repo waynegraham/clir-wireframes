@@ -1,0 +1,184 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ABCOtto Font Faces */
+@font-face {
+  font-family: "ABCOtto";
+  src: url("/assets/fonts/ABCOtto/ABCOtto-Regular.woff2") format("woff2"),
+       url("/assets/fonts/ABCOtto/ABCOtto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ABCOtto";
+  src: url("/assets/fonts/ABCOtto/ABCOtto-RegularItalic.woff2") format("woff2"),
+       url("/assets/fonts/ABCOtto/ABCOtto-RegularItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ABCOtto";
+  src: url("/assets/fonts/ABCOtto/ABCOtto-Bold.woff2") format("woff2"),
+       url("/assets/fonts/ABCOtto/ABCOtto-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* stylelint-disable custom-property-pattern, custom-property-empty-line-before */
+@theme {
+  --color-outline-variant: #debfc3;
+  --color-error-container: #ffdad6;
+  --color-surface-dim: #dbdad5;
+  --color-on-tertiary-fixed: #00210d;
+  --color-outline: #8b7074;
+  --color-tertiary-fixed: #a4f5b7;
+  --color-surface-variant: #e4e2dd;
+  --color-secondary-fixed-dim: #c8c6c5;
+  --color-secondary-fixed: #e5e2e1;
+  --color-surface-container-highest: #e4e2dd;
+  --color-inverse-on-surface: #f2f1ec;
+  --color-surface-tint: #ad2c53;
+  --color-tertiary-container: #005e2f;
+  --color-on-primary-container: #ffadbc;
+  --color-on-primary-fixed: #3f0016;
+  --color-secondary: #5f5e5e;
+  --color-on-error-container: #93000a;
+  --color-primary-container: #9a1c46;
+  --color-on-primary-fixed-variant: #8c0e3c;
+  --color-surface-container-high: #eae8e3;
+  --color-surface-bright: #fbf9f4;
+  --color-on-tertiary: #fff;
+  --color-inverse-primary: #ffb1c0;
+  --color-background: #fbf9f4;
+  --color-primary-fixed-dim: #ffb1c0;
+  --color-on-surface: #1b1c19;
+  --color-primary-fixed: #ffd9df;
+  --color-secondary-container: #e2dfde;
+  --color-surface: #fbf9f4;
+  --color-on-secondary-container: #636262;
+  --color-primary: #780030;
+  --color-surface-container: #f0eee9;
+  --color-inverse-surface: #30312e;
+  --color-tertiary: #004420;
+  --color-on-primary: #fff;
+  --color-on-secondary-fixed-variant: #474746;
+  --color-on-tertiary-container: #86d59a;
+  --color-on-background: #1b1c19;
+  --color-on-error: #fff;
+  --color-on-secondary-fixed: #1c1b1b;
+  --color-on-tertiary-fixed-variant: #005228;
+  --color-on-surface-variant: #574145;
+  --color-error: #ba1a1a;
+  --color-surface-container-low: #f5f3ee;
+  --color-surface-container-lowest: #fff;
+  --color-on-secondary: #fff;
+  --color-tertiary-fixed-dim: #88d89c;
+  --color-clir-paper: #f9f7f2;
+  --color-clir-onyx: #1a1a1a;
+  --color-clir-nav: #fdfcfb;
+  --color-clir-research: #fcfbf7;
+  --color-clir-community: #fdfaf3;
+  --color-clir-footer: #f5f3ef;
+  --color-clir-accent: #e84a7d;
+
+  --radius-DEFAULT: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+  --radius-full: 9999px;
+
+  --spacing-stack-sm: 16px;
+  --spacing-stack-md: 32px;
+  --spacing-stack-lg: 64px;
+  --spacing-unit: 8px;
+  --spacing-gutter: 24px;
+  --spacing-margin-page: 64px;
+  --container-site: 1280px;
+
+  /* --font-body-lg: 'Instru', sans-serif;
+  --font-label-caps: 'Inter', sans-serif;
+  --font-body-md: 'Inter', sans-serif; */
+  --font-body-lg: 'Instrument Sans', sans-serif;
+  --font-label-caps: 'Instrument Sans', sans-serif;
+  --font-body-md: 'Instrument Sans', sans-serif;
+  /* --font-headline-lg: 'Newsreader', serif;
+  --font-display-lg: 'Newsreader', serif;
+  --font-headline-md: 'Newsreader', serif; */
+  --font-headline-lg: 'ABCOtto', serif;
+  --font-display-lg: 'ABCOtto', serif;
+  --font-headline-md: 'ABCOtto', serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 1.6;
+  --text-body-lg--font-weight: 400;
+  --text-label-caps: 12px;
+  --text-label-caps--line-height: 1.2;
+  --text-label-caps--letter-spacing: 0.1em;
+  --text-label-caps--font-weight: 700;
+  --text-body-md: 16px;
+  --text-body-md--line-height: 1.5;
+  --text-body-md--font-weight: 400;
+  --text-headline-lg: 40px;
+  --text-headline-lg--line-height: 1.2;
+  --text-headline-lg--letter-spacing: -0.01em;
+  --text-headline-lg--font-weight: 500;
+  --text-display-lg: 64px;
+  --text-display-lg--line-height: 1.1;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-lg--font-weight: 600;
+  --text-headline-md: 32px;
+  --text-headline-md--line-height: 1.3;
+  --text-headline-md--font-weight: 500;
+  --text-stat: 48px;
+  --text-stat--line-height: 1;
+}
+/* stylelint-enable custom-property-pattern, custom-property-empty-line-before */
+
+@layer base {
+  .material-symbols-outlined {
+    font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24;
+  }
+}
+
+@layer components {
+  .site-shell {
+    @apply max-w-site mx-auto px-8;
+  }
+
+  .nav-link {
+    @apply font-headline-md hover:text-primary-container dark:hover:text-clir-accent text-lg font-medium tracking-tight text-stone-600 transition-colors duration-200 dark:text-stone-400;
+  }
+
+  .primary-button {
+    @apply bg-clir-onyx text-label-caps text-clir-paper hover:bg-primary px-10 py-4 tracking-[0.2em] uppercase transition-colors;
+  }
+
+  .secondary-button {
+    @apply border-clir-onyx text-label-caps hover:bg-clir-onyx hover:text-clir-paper border px-10 py-4 tracking-[0.2em] uppercase transition-all;
+  }
+
+  .editorial-callout {
+    border-left: 4px solid;
+  }
+
+  .mosaic-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(300px, auto);
+  }
+
+  .hero-pattern {
+    background-image: radial-gradient(#1a1a1a 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
