@@ -156,7 +156,9 @@
   }
 
   .nav-link {
-    @apply font-headline-md hover:text-primary-container dark:hover:text-clir-accent text-lg font-medium tracking-tight text-stone-600 transition-colors duration-200 dark:text-stone-400;
+    @apply font-body-md hover:text-primary-container dark:hover:text-clir-accent text-lg font-medium tracking-tight text-stone-600 transition-colors duration-200 dark:text-stone-400;
+
+    /* @apply font-headline-md hover:text-primary-container dark:hover:text-clir-accent text-lg font-medium tracking-tight text-stone-600 transition-colors duration-200 dark:text-stone-400; */
   }
 
   .primary-button {
