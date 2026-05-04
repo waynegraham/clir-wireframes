@@ -221,8 +221,8 @@ module.exports = function (eleventyConfig) {
       layouts: '_layouts',
       includes: '_includes',
     },
-    // pathPrefix: '/forum2026/',
-    pathPrefix: branch === 'dev' ? '/forum2026/' : '',
+    pathPrefix: '/clir-wireframes/',
+    // pathPrefix: branch === 'dev' ? '/forum2026/' : '',
   };
 };
 
