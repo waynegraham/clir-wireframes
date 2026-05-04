@@ -1,0 +1,55 @@
+---
+layout: base.njk
+---
+
+<main id="post" class="max-w-[1280px] mx-auto px-16 pt-24 pb-32">
+    <!-- Article Header -->
+    <header class="max-w-[720px] mx-auto pt-18 mb-16">
+        <div class="mb-8">
+            <span class="font-label-caps text-label-caps text-tertiary uppercase border-b-2 border-tertiary pb-1">Announcements</span>
+        </div>
+        <h1 class="font-display-xl text-display-xl text-on-surface mb-8">
+            {{ title }}
+        </h1>
+        <div class="flex flex-wrap items-center gap-6 border-t border-b border-outline-variant py-4 font-label-caps text-[10px] tracking-[0.2em] uppercase text-on-surface-variant">
+            <div class="flex items-center gap-2">
+                <span class="font-bold">Author:</span>
+                <span>{{ author }}</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="font-bold">Published:</span>
+                <span>{{ published_date | readableDate }}</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="font-bold">Reading Time:</span>
+                <span>{{ content | emojiReadTime }}</span>
+            </div>
+        </div>
+    </header>
+    <!-- Main Content -->
+    <article id="post-content" class="max-w-[720px] mx-auto">
+        <div class="font-headline-sm text-body-lg text-on-surface leading-[1.8] space-y-8">
+            {{ content | safe }}
+        </div>
+        <div class="editorial-divider"></div>
+        {# <!-- Further Reading -->
+        <section class="mt-16">
+            <h3 class="font-headline-sm text-tertiary mb-6">Further Reading</h3>
+            <ul class="space-y-4 font-body-sm text-on-surface-variant">
+                <li class="flex gap-4">
+                    <span class="text-tertiary font-bold">[1]</span>
+                    <span>Vane, H. (2022). <i>The Silicon Scriptorium: Reimagining the Archive</i>. Oxford University Press.</span>
+                </li>
+                <li class="flex gap-4">
+                    <span class="text-tertiary font-bold">[2]</span>
+                    <span>Mendoza, L. "Stability and Entropy in Virtual Environments." <i>Journal of Digital Humanities</i>, Vol. 12, No. 3.</span>
+                </li>
+                <li class="flex gap-4">
+                    <span class="text-tertiary font-bold">[3]</span>
+                    <span>The Long Now Foundation. <i>The 10,000 Year Clock and Digital Continuity</i>. Report #82.</span>
+                </li>
+            </ul>
+        </section> #}
+    </article>
+</main>
+
